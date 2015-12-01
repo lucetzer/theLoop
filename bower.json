@@ -1,0 +1,23 @@
+{
+  "name": "mean",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "Lucy Fang <lucyfang2@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8"
+  }
+}
