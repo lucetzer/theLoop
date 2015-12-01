@@ -18,4 +18,10 @@ describe('the Loop page', function() {
     expect(post.getText()).toContain('hello');
   });
 
+  it('will not post an empty post', function() {
+    postBox.sendKeys('');
+    postBtn.click();
+    expect(post.isPresent()).toBe(false);
+  });
+
 });

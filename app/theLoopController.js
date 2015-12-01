@@ -7,9 +7,13 @@ theLoop.controller('theLoopController', ['$scope', function($scope) {
     self.posts = [];
 
     self.addPost = function() {
-      self.posts.push({title: self.title, upvotes: 0});
-      self.title = '';
-    }
+      if(!self.title || self.title === '') {
+        return;
+      } else {
+        self.posts.push({title: self.title, upvotes: 0});
+        self.title = '';
+      }
+    };
 
   },
 ]);

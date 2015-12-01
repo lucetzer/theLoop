@@ -18,5 +18,11 @@ describe('theLoopController', function() {
     expect(ctrl.posts[0].title).toEqual('hello there');
   });
 
+  it('should not allow you to post an empty post', function() {
+    ctrl.title = '';
+    ctrl.addPost();
+    expect(ctrl.posts.length).toEqual(0);
+  });
+
 
 });
