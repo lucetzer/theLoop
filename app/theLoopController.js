@@ -1,14 +1,15 @@
+'use strict';
+
 theLoop.controller('theLoopController', ['$scope', function($scope) {
-    $scope.test = 'Hello world!';
 
-    $scope.posts = [
-      'post 1',
-      'post 2',
-      'post 3',
-      'post 4',
-      'post 5'
-    ];
+    var self = this;
 
-    
+    self.posts = [];
+
+    self.addPost = function() {
+      self.posts.push({title: self.title, upvotes: 0});
+      self.title = '';
+    }
+
   },
 ]);
