@@ -24,5 +24,11 @@ describe('theLoopController', function() {
     expect(ctrl.posts.length).toEqual(0);
   });
 
+  it('should add a link for a post', function() {
+    ctrl.title = 'Google';
+    ctrl.link = 'google.com';
+    ctrl.addPost();
+    expect(ctrl.posts[0].link).toEqual('google.com');
+  });
 
 });
