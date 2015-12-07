@@ -1,10 +1,10 @@
 'use strict';
 
-theLoop.controller('theLoopController', ['$scope', function($scope) {
+theLoop.controller('theLoopController', ['posts', function(posts) {
 
     var self = this;
 
-    self.posts = [];
+    self.posts = posts.posts;
 
     self.addPost = function() {
       if(!self.title || self.title === '') {
